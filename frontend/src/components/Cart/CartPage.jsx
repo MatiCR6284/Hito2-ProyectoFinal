@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { CartContext } from '../context/CartContext'
-import { UserContext } from '../context/UserContext'
+import { CartContext } from '../../context/CartContext'
+import { UserContext } from '../../context/UserContext'
 import './cartPage.css'
 
 const CartPage = () => {
