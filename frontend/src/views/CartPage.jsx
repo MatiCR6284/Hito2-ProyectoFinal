@@ -102,13 +102,8 @@ const CartPage = () => {
           </div>
           )
         : (
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '2fr 1fr',
-            gap: '30px'
-          }}
-          >
-            <div>
+          <div className='cart-layout'>
+            <div className='cart-packages-section'>
               <div style={{
                 display: 'flex',
                 justifyContent: 'space-between',
@@ -134,30 +129,15 @@ const CartPage = () => {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 {cartItems.map((item) => (
-                  <div
-                    key={item.id} style={{
-                      background: 'white',
-                      borderRadius: '15px',
-                      padding: '20px',
-                      boxShadow: '0 5px 15px rgba(0,0,0,0.1)',
-                      display: 'flex',
-                      gap: '20px'
-                    }}
-                  >
-                    <div style={{ width: '200px', height: '150px' }}>
+                  <div key={item.id} className='cart-package-item'>
+                    <div className='cart-package-image'>
                       <img
                         src={item.packageImage}
                         alt={item.packageTitle}
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
-                          borderRadius: '10px'
-                        }}
                       />
                     </div>
 
-                    <div style={{ flex: 1 }}>
+                    <div className='cart-package-details'>
                       <div style={{
                         display: 'flex',
                         justifyContent: 'space-between',
@@ -209,7 +189,7 @@ const CartPage = () => {
               </div>
             </div>
 
-            <div>
+            <div className='cart-summary-section'>
               <div style={{
                 background: 'white',
                 borderRadius: '15px',
