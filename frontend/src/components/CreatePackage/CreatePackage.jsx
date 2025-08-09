@@ -149,38 +149,38 @@ const CreatePackage = () => {
       <form onSubmit={handleSubmit} className='package-form'>
         {/* info */}
         <div className='form-section'>
-          <h2>ℹ️ Informazioni Base</h2>
+          <h2>ℹ️ Información Básica</h2>
 
           <div className='form-row'>
             <div className='form-group'>
-              <label htmlFor='title'>Titolo Pacchetto *</label>
+              <label htmlFor='title'>Título del Paquete *</label>
               <input
                 type='text'
                 id='title'
                 name='title'
                 value={formData.title}
                 onChange={handleInputChange}
-                placeholder='es. Roma Classica - Tour 3 giorni'
+                placeholder='ej. Roma Clásica - Tour 3 días'
                 required
               />
             </div>
 
             <div className='form-group'>
-              <label htmlFor='destination'>Destinazione *</label>
+              <label htmlFor='destination'>Destino *</label>
               <input
                 type='text'
                 id='destination'
                 name='destination'
                 value={formData.destination}
                 onChange={handleInputChange}
-                placeholder='es. Roma, Italia'
+                placeholder='ej. Roma, Italia'
                 required
               />
             </div>
           </div>
 
           <div className='form-group'>
-            <label htmlFor='description'>Descrizione</label>
+            <label htmlFor='description'>Descripción</label>
             <textarea
               id='description'
               name='description'
@@ -192,7 +192,7 @@ const CreatePackage = () => {
           </div>
 
           <div className='form-group'>
-            <label htmlFor='image'>URL Immagine</label>
+            <label htmlFor='image'>URL de Imagen</label>
             <input
               type='url'
               id='image'
@@ -210,19 +210,19 @@ const CreatePackage = () => {
 
           <div className='form-row'>
             <div className='form-group'>
-              <label htmlFor='duration'>Durata</label>
+              <label htmlFor='duration'>Duración</label>
               <input
                 type='text'
                 id='duration'
                 name='duration'
                 value={formData.duration}
                 onChange={handleInputChange}
-                placeholder='es. 3 giorni'
+                placeholder='ej. 3 días'
               />
             </div>
 
             <div className='form-group'>
-              <label htmlFor='price'>Prezzo (€) *</label>
+              <label htmlFor='price'>Precio (€) *</label>
               <input
                 type='number'
                 id='price'
@@ -236,7 +236,7 @@ const CreatePackage = () => {
             </div>
 
             <div className='form-group'>
-              <label htmlFor='maxParticipants'>Max Partecipanti</label>
+              <label htmlFor='maxParticipants'>Máximo Participantes</label>
               <input
                 type='number'
                 id='maxParticipants'
@@ -251,7 +251,7 @@ const CreatePackage = () => {
 
           <div className='form-row'>
             <div className='form-group'>
-              <label htmlFor='startDate'>Data Inizio</label>
+              <label htmlFor='startDate'>Fecha de Inicio</label>
               <input
                 type='date'
                 id='startDate'
@@ -262,7 +262,7 @@ const CreatePackage = () => {
             </div>
 
             <div className='form-group'>
-              <label htmlFor='endDate'>Data Fine</label>
+              <label htmlFor='endDate'>Fecha de Finalización</label>
               <input
                 type='date'
                 id='endDate'
@@ -276,7 +276,7 @@ const CreatePackage = () => {
 
         {/* services */}
         <div className='form-section'>
-          <h2>✅ Servizi Inclusi</h2>
+          <h2>✅ Servicios Incluidos</h2>
 
           {formData.services.map((service, index) => (
             <div key={index} className='service-row'>
@@ -284,7 +284,7 @@ const CreatePackage = () => {
                 type='text'
                 value={service}
                 onChange={(e) => handleServiceChange(index, e.target.value)}
-                placeholder='es. Hotel 4 stelle'
+                placeholder='ej. Hotel de 4 estrellas'
                 className='service-input'
               />
               {formData.services.length > 1 && (
@@ -304,18 +304,18 @@ const CreatePackage = () => {
             onClick={addService}
             className='btn-add'
           >
-            ➕ Aggiungi Servizio
+            ➕ Agregar Servicio
           </button>
         </div>
 
         {/* trip details */}
         <div className='form-section'>
-          <h2>🗓️ Itinerario Giorno per Giorno</h2>
+          <h2>🗓️ Itinerario Día a Día</h2>
 
           {formData.itinerary.map((day, index) => (
             <div key={index} className='itinerary-day'>
               <div className='day-header'>
-                <h4>Giorno {day.day}</h4>
+                <h4>Día {day.day}</h4>
                 {formData.itinerary.length > 1 && (
                   <button
                     type='button'
@@ -329,7 +329,7 @@ const CreatePackage = () => {
               <textarea
                 value={day.activities}
                 onChange={(e) => handleItineraryChange(index, 'activities', e.target.value)}
-                placeholder='Descrivi le attività del giorno...'
+                placeholder='Describe las actividades del día...'
                 rows={3}
                 className='itinerary-textarea'
               />
@@ -341,7 +341,7 @@ const CreatePackage = () => {
             onClick={addItineraryDay}
             className='btn-add'
           >
-            ➕ Aggiungi Giorno
+            ➕ Agregar Día
           </button>
         </div>
 

@@ -26,39 +26,39 @@ const PackageDetail = () => {
         const mockPackages = {
           1: {
             id: 1,
-            title: 'Roma Classica',
+            title: 'Roma Clásica',
             destination: 'Roma, Italia',
-            description: 'Esplora la città eterna con un tour completo di 3 giorni. Visiterai i monumenti più iconici, gusterai la cucina locale e scoprirai la storia millenaria di Roma.',
+            description: 'Explora la ciudad eterna con un tour completo de 3 días. Visitarás los monumentos más icónicos, degustarás la cocina local y descubrirás la historia milenaria de Roma.',
             price: 299,
             image: '/src/assets/img/rome.jpg',
-            duration: '3 giorni / 2 notti',
+            duration: '3 días / 2 noches',
             rating: 4.8,
             reviews: 124,
             maxParticipants: 20,
             availableDates: ['2025-09-15', '2025-09-22', '2025-09-29', '2025-10-06'],
             services: [
-              'Hotel 4 stelle nel centro storico',
-              'Guida turistica professionale',
-              'Colazione inclusa',
-              'Trasporti locali inclusi',
-              'Ingresso ai musei principali',
-              'Assicurazione viaggio'
+              'Hotel de 4 estrellas en el centro histórico',
+              'Guía turística profesional',
+              'Desayuno incluido',
+              'Transportes locales incluidos',
+              'Entrada a los museos principales',
+              'Seguro de viaje'
             ],
             itinerary: [
               {
                 day: 1,
-                title: 'Arrivo e Centro Storico',
-                activities: 'Arrivo a Roma, check-in in hotel. Nel pomeriggio visita guidata del Colosseo e dei Fori Imperiali. Cena tipica in una trattoria del centro.'
+                title: 'Llegada y Centro Histórico',
+                activities: 'Llegada a Roma, check-in en el hotel. Por la tarde, visita guiada del Coliseo y de los Foros Imperiales. Cena típica en una trattoria del centro.'
               },
               {
                 day: 2,
-                title: 'Vaticano e Castel Sant\'Angelo',
-                activities: 'Mattinata dedicata alla visita dei Musei Vaticani e della Cappella Sistina. Pomeriggio a Castel Sant\'Angelo e passeggiata lungo il Tevere.'
+                title: 'Vaticano y Castillo Sant\'Angelo',
+                activities: 'Mañana dedicada a la visita de los Museos Vaticanos y de la Capilla Sixtina. Tarde en el Castillo Sant\'Angelo y paseo por el Tíber.'
               },
               {
                 day: 3,
-                title: 'Fontane e Piazze',
-                activities: 'Tour delle fontane e piazze più belle: Fontana di Trevi, Piazza di Spagna, Pantheon. Shopping e partenza.'
+                title: 'Fuentes y Plazas',
+                activities: 'Tour por las fuentes y plazas más bellas: Fuente de Trevi, Plaza de España, Panteón. Compras y salida.'
               }
             ],
             organizer: {
@@ -69,33 +69,33 @@ const PackageDetail = () => {
           },
           2: {
             id: 2,
-            title: 'Toscana & Vino',
+            title: 'Toscana y Vino',
             destination: 'Toscana, Italia',
-            description: 'Un viaggio enogastronomico tra le colline toscane, tra borghi medievali, cantine storiche e paesaggi mozzafiato.',
+            description: 'Un viaje enogastronómico entre las colinas toscanas, entre pueblos medievales, bodegas históricas y paisajes impresionantes.',
             price: 450,
             image: '/src/assets/img/tuscany.jpg',
-            duration: '5 giorni / 4 notti',
+            duration: '5 días / 4 noches',
             rating: 4.9,
             reviews: 89,
             maxParticipants: 15,
             availableDates: ['2025-08-10', '2025-08-17', '2025-08-24'],
             services: [
-              'Agriturismo di charme',
-              'Degustazioni vini DOC',
-              'Tour delle cantine',
-              'Cooking class tipica',
-              'Trasporti privati'
+              'Agriturismo de encanto',
+              'Degustaciones de vinos DOC',
+              'Tour por las bodegas',
+              'Clase de cocina típica',
+              'Transportes privados'
             ],
             itinerary: [
               {
                 day: 1,
-                title: 'Firenze e Chianti',
-                activities: 'Arrivo a Firenze, trasferimento nel Chianti. Prima degustazione in cantina storica.'
+                title: 'Florencia y Chianti',
+                activities: 'Llegada a Florencia, traslado a Chianti. Primera degustación en una bodega histórica.'
               },
               {
                 day: 2,
-                title: 'San Gimignano e Volterra',
-                activities: 'Visita ai borghi medievali di San Gimignano e Volterra. Degustazione di Vernaccia.'
+                title: 'San Gimignano y Volterra',
+                activities: 'Visita a los pueblos medievales de San Gimignano y Volterra. Degustación de Vernaccia.'
               }
             ],
             organizer: {
@@ -112,7 +112,7 @@ const PackageDetail = () => {
           setLoading(false)
         }, 1000)
       } catch (error) {
-        console.error('Errore nel caricamento del pacchetto:', error)
+        console.error('Error al cargar el paquete:', error)
         setLoading(false)
       }
     }
@@ -127,7 +127,7 @@ const PackageDetail = () => {
     }
 
     if (!selectedDate) {
-      alert('Seleziona una data di partenza')
+      alert('Selecciona una fecha de salida')
       return
     }
 
@@ -141,7 +141,7 @@ const PackageDetail = () => {
     addToCart(packageData, bookingDetails)
 
     // confirmation message
-    alert(`Pacchetto aggiunto al carrello! Totale: €${packageData.price * participants}`)
+    alert(`¡Paquete agregado al carrito! Total: €${packageData.price * participants}`)
   }
 
   const handleShare = () => {
@@ -152,23 +152,23 @@ const PackageDetail = () => {
         url: window.location.href
       })
     } else {
-      // fallback: copia URL
+      // fallback: copy URL
       navigator.clipboard.writeText(window.location.href)
-      alert('Link copiato negli appunti!')
+      alert('¡Enlace copiado al portapapeles!')
     }
   }
 
   const addToFavorites = () => {
-    // logic add to favorites
-    console.log('Aggiunto ai preferiti:', id)
-    alert('Pacchetto aggiunto ai preferiti!')
+    // lógica para agregar a favoritos
+    console.log('Agregado a favoritos:', id)
+    alert('¡Paquete agregado a favoritos!')
   }
 
   if (loading) {
     return (
       <div className='package-detail-container'>
         <div className='loading'>
-          <h2>Caricamento...</h2>
+          <h2>Cargando...</h2>
           <div className='spinner' />
         </div>
       </div>
@@ -179,10 +179,10 @@ const PackageDetail = () => {
     return (
       <div className='package-detail-container'>
         <div className='not-found'>
-          <h2>🚫 Pacchetto non trovato</h2>
-          <p>Il pacchetto che stai cercando non esiste o è stato rimosso.</p>
+          <h2>🚫 Paquete no encontrado</h2>
+          <p>El paquete que buscas no existe o ha sido removido.</p>
           <button onClick={() => navigate('/')} className='btn-home'>
-            Torna alla Home
+            Volver a la Home
           </button>
         </div>
       </div>
@@ -267,13 +267,13 @@ const PackageDetail = () => {
 
             <div className='booking-form'>
               <div className='form-group'>
-                <label>Data di partenza</label>
+                <label>Fecha de salida</label>
                 <select
                   value={selectedDate}
                   onChange={(e) => setSelectedDate(e.target.value)}
                   className='date-select'
                 >
-                  <option value=''>Seleziona data</option>
+                  <option value=''>Selecciona fecha</option>
                   {packageData.availableDates.map(date => (
                     <option key={date} value={date}>
                       {new Date(date).toLocaleDateString('it-IT', {
@@ -287,7 +287,7 @@ const PackageDetail = () => {
               </div>
 
               <div className='form-group'>
-                <label>Partecipanti</label>
+                <label>Participantes</label>
                 <div className='participants-selector'>
                   <button
                     type='button'
@@ -317,7 +317,7 @@ const PackageDetail = () => {
                 className='btn-book-now'
                 disabled={!selectedDate}
               >
-                🎯 Prenota Ora
+                🎯 Reserva ahora
               </button>
             </div>
 

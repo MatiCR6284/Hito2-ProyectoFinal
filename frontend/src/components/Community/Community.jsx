@@ -13,7 +13,7 @@ const Community = () => {
       {
         id: 1,
         author: 'Marco Verdi',
-        content: 'Appena tornato dalla fantastica Sicilia! Le spiagge di Taormina sono spettacolari 🏖️',
+        content: '¡Acabo de regresar de la fantástica Sicilia! Las playas de Taormina son espectaculares 🏖️',
         image: '/src/assets/img/sicilia.jpg',
         likes: 24,
         comments: 8,
@@ -23,7 +23,7 @@ const Community = () => {
       {
         id: 2,
         author: 'Laura Rossi',
-        content: 'Chi ha mai visitato Praga? Sto pianificando un viaggio per il prossimo mese!',
+        content: '¿Quién ha visitado Praga? ¡Estoy planeando un viaje para el próximo mes!',
         likes: 12,
         comments: 15,
         timestamp: '5 ore fa',
@@ -32,7 +32,7 @@ const Community = () => {
       {
         id: 3,
         author: 'Giuseppe Bianchi',
-        content: 'Condivido questa vista mozzafiato dal Machu Picchu! Un\'esperienza che non dimenticherò mai 🏔️',
+        content: '¡Comparto esta impresionante vista desde Machu Picchu! Una experiencia que nunca olvidaré. 🏔️',
         likes: 89,
         comments: 23,
         timestamp: '1 giorno fa',
@@ -47,7 +47,7 @@ const Community = () => {
 
     const post = {
       id: posts.length + 1,
-      author: userData?.name || 'Utente Anonimo',
+      author: userData?.name || 'Usuario anónimo',
       content: newPost,
       likes: 0,
       comments: 0,
@@ -128,7 +128,7 @@ const Community = () => {
                 💬 {post.comments}
               </button>
               <button className='action-btn share-btn'>
-                🔄 Condividi
+                🔄 Compartir
               </button>
             </div>
           </div>

@@ -21,67 +21,67 @@ const PackagesList = () => {
         const mockPackages = [
           {
             id: 1,
-            title: 'Roma Classica',
+            title: 'Roma Clásica',
             destination: 'Roma, Italia',
-            description: 'Esplora la città eterna con un tour di 3 giorni',
+            description: 'Explora la ciudad eterna con un tour de 3 días',
             price: 299,
             image: '/src/assets/img/rome.jpg',
-            duration: '3 giorni',
+            duration: '3 días',
             rating: 4.8,
             reviews: 124
           },
           {
             id: 2,
-            title: 'Toscana & Vino',
-            description: 'Tour enogastronomico tra le colline toscane',
+            title: 'Toscana y Vino',
+            description: 'Tour enogastronómico entre las colinas toscanas',
             destination: 'Toscana, Italia',
             price: 450,
             image: '/src/assets/img/tuscany.jpg',
-            duration: '5 giorni',
+            duration: '5 días',
             rating: 4.9,
             reviews: 89
           },
           {
             id: 3,
             title: 'Costa Amalfitana',
-            description: 'Relax e bellezza sulla costiera più famosa d\'Italia',
+            description: 'Relajación y belleza en la costa más famosa de Italia',
             destination: 'Amalfi, Italia',
             price: 599,
             image: '/src/assets/img/amalfi.jpg',
-            duration: '7 giorni',
+            duration: '7 días',
             rating: 4.7,
             reviews: 156
           },
           {
             id: 4,
-            title: 'Venezia Romantica',
-            description: 'Un weekend romantico nella città dei canali',
+            title: 'Venecia Romántica',
+            description: 'Un fin de semana romántico en la ciudad de los canales',
             destination: 'Venezia, Italia',
             price: 349,
             image: '/src/assets/img/venice.jpg',
-            duration: '2 giorni',
+            duration: '2 días',
             rating: 4.6,
             reviews: 203
           },
           {
             id: 5,
-            title: 'Sicilia Autentica',
-            description: 'Scopri i tesori nascosti della Sicilia',
+            title: 'Sicilia Auténtica',
+            description: 'Descubre los tesoros escondidos de Sicilia',
             destination: 'Sicilia, Italia',
             price: 520,
             image: '/src/assets/img/sicilia.jpg',
-            duration: '6 giorni',
+            duration: '6 días',
             rating: 4.8,
             reviews: 98
           },
           {
             id: 6,
-            title: 'Dolomiti Adventure',
-            description: 'Trekking e natura nelle montagne più belle',
+            title: 'Aventura en las Dolomitas',
+            description: 'Senderismo y naturaleza en las montañas más bellas',
             destination: 'Trentino, Italia',
             price: 380,
             image: '/src/assets/img/dolomiti.jpg',
-            duration: '4 giorni',
+            duration: '4 días',
             rating: 4.9,
             reviews: 67
           }
@@ -93,7 +93,7 @@ const PackagesList = () => {
           setLoading(false)
         }, 1000)
       } catch (error) {
-        console.error('Errore nel caricamento dei pacchetti:', error)
+        console.error('Error al cargar los paquetes:', error)
         setLoading(false)
       }
     }
@@ -133,7 +133,7 @@ const PackagesList = () => {
     return (
       <div className='packages-container'>
         <div className='loading'>
-          <h2>Caricamento pacchetti...</h2>
+          <h2>Cargando paquetes...</h2>
           <div className='spinner' />
         </div>
       </div>
@@ -143,18 +143,18 @@ const PackagesList = () => {
   return (
     <div className='packages-container'>
       <div className='packages-header'>
-        <h1>🧳 Tutti i Pacchetti</h1>
-        <p>Trova il viaggio perfetto per te</p>
+        <h1>🧳 Todos los Paquetes</h1>
+        <p>Encuentra el viaje perfecto para ti</p>
       </div>
 
       <div className='filters-section'>
-        <h3>🔍 Filtra i risultati</h3>
+        <h3>🔍 Filtrar los resultados</h3>
         <div className='filters-grid'>
           <div className='filter-group'>
-            <label>Destinazione</label>
+            <label>Destino</label>
             <input
               type='text'
-              placeholder='es. Roma, Toscana...'
+              placeholder='ej. Roma, Toscana...'
               value={filters.destination}
               onChange={(e) => handleFilterChange('destination', e.target.value)}
               className='filter-input'
@@ -162,7 +162,7 @@ const PackagesList = () => {
           </div>
 
           <div className='filter-group'>
-            <label>Prezzo minimo (€)</label>
+            <label>Precio mínimo (€)</label>
             <input
               type='number'
               placeholder='0'
@@ -173,7 +173,7 @@ const PackagesList = () => {
           </div>
 
           <div className='filter-group'>
-            <label>Prezzo massimo (€)</label>
+            <label>Precio máximo (€)</label>
             <input
               type='number'
               placeholder='1000'
@@ -184,29 +184,29 @@ const PackagesList = () => {
           </div>
 
           <div className='filter-group'>
-            <label>Durata</label>
+            <label>Duración</label>
             <select
               value={filters.duration}
               onChange={(e) => handleFilterChange('duration', e.target.value)}
               className='filter-select'
             >
-              <option value=''>Tutte</option>
-              <option value='2'>Weekend (2 giorni)</option>
-              <option value='3'>Breve (3 giorni)</option>
-              <option value='4'>Medio (4-5 giorni)</option>
-              <option value='6'>Lungo (6-7 giorni)</option>
+              <option value=''>Todas</option>
+              <option value='2'>Fin de semana (2 días)</option>
+              <option value='3'>Corto (3 días)</option>
+              <option value='4'>Mediano (4-5 días)</option>
+              <option value='6'>Largo (6-7 días)</option>
             </select>
           </div>
 
           <div className='filter-actions'>
             <button onClick={clearFilters} className='btn-clear-filters'>
-              🗑️ Pulisci
+              🗑️ Limpiar
             </button>
           </div>
         </div>
 
         <div className='results-count'>
-          Trovati {filteredPackages.length} pacchetti
+          Encontrados {filteredPackages.length} paquetes
         </div>
       </div>
 
@@ -214,10 +214,10 @@ const PackagesList = () => {
         {filteredPackages.length === 0
           ? (
             <div className='no-results'>
-              <h3>😕 Nessun pacchetto trovato</h3>
-              <p>Prova a modificare i filtri di ricerca</p>
+              <h3>😕 Ningún paquete encontrado</h3>
+              <p>Intenta modificar los filtros de búsqueda</p>
               <button onClick={clearFilters} className='btn-reset'>
-                Mostra tutti i pacchetti
+                Mostrar todos los paquetes
               </button>
             </div>
             )
@@ -231,7 +231,7 @@ const PackagesList = () => {
                         className='btn-view-details'
                         onClick={() => navigate(`/package/${pkg.id}`)}
                       >
-                        👁️ Dettagli
+                        👁️ Detalles
                       </button>
                     </div>
                   </div>
@@ -249,13 +249,13 @@ const PackagesList = () => {
                     <div className='package-footer'>
                       <div className='package-price'>
                         <strong>€{pkg.price}</strong>
-                        <small>a persona</small>
+                        <small>por persona</small>
                       </div>
                       <button
                         className='btn-book'
                         onClick={() => navigate(`/package/${pkg.id}`)}
                       >
-                        Prenota
+                        Reservar
                       </button>
                     </div>
                   </div>
