@@ -43,6 +43,7 @@ button {
     background: transparent;
     color: white;
     border-color: rgba(255, 255, 255, 0.3);
+    position: relative; /* Necessario per il posizionamento del badge */
 }
 
 .btnempty:hover {
@@ -69,5 +70,23 @@ button {
         font-size: 0.8rem;
         padding: 8px 12px;
     }
+}
+
+/* cart notification */
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #dc3545;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 10;
 }
 
