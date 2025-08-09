@@ -1,0 +1,22 @@
+[
+  {
+    "email": "test@test.com",
+    "password": "123123",
+    "id": "UYz_2Vy9rNw7uELQ7AZ8D"
+  },
+  {
+    "email": "mic@test.com",
+    "password": "123123",
+    "id": "3EXEjf76cfdaVuJKyfSPP"
+  },
+  {
+    "email": "test@test.it",
+    "password": "123456",
+    "id": "PH4sd_CFhfuxeQ-Nt4XUO"
+  },
+  {
+    "email": "test@test.de",
+    "password": "123123",
+    "id": "YCM09VmRZCB6WktGasrrV"
+  }
+]
